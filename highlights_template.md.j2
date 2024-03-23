@@ -1,0 +1,9 @@
+### {{ title }}
+
+Author: {{ author }}
+
+Created: {{ created_at }}
+
+{% for note in notes %} 
+{% if note.note %}__**{{ note.note }}**__ - {% endif %}{{ note.text }} (**{{ title }}**, page: {{ note.page }})
+{% endfor %}
