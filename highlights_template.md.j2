@@ -6,4 +6,9 @@ Created: {{ created_at }}
 
 {% for note in notes %} 
 {% if note.note %}__**{{ note.note }}**__ - {% endif %}{{ note.text }} (**{{ title }}**, page: {{ note.page }})
+
+{% if note.image %}
+![Image from page {{ note.page }}]({{ note.image }})
+{% endif %}
+
 {% endfor %}
